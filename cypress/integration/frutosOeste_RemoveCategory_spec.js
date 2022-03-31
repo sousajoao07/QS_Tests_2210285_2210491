@@ -20,30 +20,6 @@ describe('FRUTOS OESTE TESTING', () => {
 
     })
 
-    it('Add Category', () => {
-        cy.get('.card-header .btn')
-            .click()
-
-        cy.get('.form-control')
-            .eq(0)
-            .type('Bio')
-
-        cy.get('.form-control')
-            .get('input[type="file"]').attachFile(filepath)
-            .get('.form-group .btn')
-            .first()
-            .click()
-
-        cy.get('tbody')
-            .should('have.length', 7)
-
-        //logout para iniciar o próximo teste
-        cy.get('.navbar-nav .nav-item')
-        .eq(4)
-        .click()  
-
-    })
-
     it('Remove Category', () => {
         cy.get('table>tbody')
         .should('have.length', 7)
@@ -55,7 +31,5 @@ describe('FRUTOS OESTE TESTING', () => {
         })
         cy.get('tbody')
         .should('have.length', 6)
-
-        
     })
 })
