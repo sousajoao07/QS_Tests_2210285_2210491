@@ -23,7 +23,7 @@ Scenario: Add a new Product with one or more fields unfilled
     And see products list 
     When I Click on add button
     And the form is displayed
-    And I dont´t fill all the fields    And submit 
+    And I dont't fill all the fields    And submit 
     Then the product will not be added
     And an error message "Preencha os campos em falta." is displayed 
     And I am redirected to the products list
